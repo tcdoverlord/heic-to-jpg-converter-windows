@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/heic-to-jpeg-hero.png" alt="HEIC to JPEG Converter hero banner" width="100%">
+  <img src="images/heic-to-jpeg-hero.jpg" alt="HEIC to JPEG Converter hero banner" width="100%">
 </p>
 
 <p align="center">
