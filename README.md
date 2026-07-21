@@ -61,6 +61,16 @@ C:\Photos\iPhone\IMG_1001.HEIC
 Output:
 C:\Photos\JPG Converted\IMG_1001.jpg
 ```
+---
+### Live Example
+
+<p align="center">
+  <img
+    src="images/example.gif"
+    alt="Writer Publishing Workflow System — master manuscript to Kindle, print, and Audible"
+    width="100%"
+  >
+</p>
 
 ## Run the converter
 
