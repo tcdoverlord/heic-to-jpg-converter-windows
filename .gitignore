@@ -9,3 +9,7 @@ build_output/
 logs/*.log
 .DS_Store
 Thumbs.db
+
+desktop.ini
+
+Thumbs.db
