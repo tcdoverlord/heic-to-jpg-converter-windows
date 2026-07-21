@@ -1,0 +1,10 @@
+Project: HEIC to JPG Converter by TCDOVERLORD
+Version: Not assigned by owner
+Status: Foundation source prepared; Windows build unverified
+Six-Color Phase: Red
+Completion: Architecture and first working source path prepared
+Priority: Active
+Last Updated: 2026-07-20
+Resume Difficulty: Low
+Next Task: Copy to the requested Windows path, run automated tests, build unsigned EXE, and perform real HEIC tests
+Read Next: PROJECT_CONTINUITY.md
