@@ -1,3 +1,16 @@
+<p align="center">
+  <img src="images/heic-to-jpeg-hero.png" alt="HEIC to JPEG Converter hero banner" width="100%">
+</p>
+
+<p align="center">
+  <img alt="Status: Local Working Build" src="https://img.shields.io/badge/status-local%20working%20build-f59e0b">
+  <img alt="Platform: Windows 10 and 11" src="https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-0078D4">
+  <img alt="Python 3.10 or newer" src="https://img.shields.io/badge/python-3.10%2B-3776AB">
+  <img alt="Converts HEIC and HEIF to JPG" src="https://img.shields.io/badge/converts-HEIC%20%7C%20HEIF%20%E2%86%92%20JPG-8B5CF6">
+  <img alt="Tests: 6 passed" src="https://img.shields.io/badge/tests-6%20passed-22C55E">
+  <img alt="License: Personal Learning" src="https://img.shields.io/badge/license-personal%20learning-64748B">
+</p>
+
 # HEIC to JPG Converter by TCDOVERLORD
 
 A simple Windows tool that converts iPhone HEIC and HEIF photos into JPG copies.
