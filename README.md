@@ -48,3 +48,20 @@ The original Python application, tests, and build scripts are preserved in [`leg
 ## License
 
 See [LICENSE](LICENSE).
+
+## Run the Prebuilt Windows App
+
+You can run the prebuilt Rust application without installing Rust or compiling the source code.
+
+1. Download the repository using **Code → Download ZIP**, then extract the ZIP.
+2. Open the extracted repository folder in File Explorer.
+3. Open `build_output`, then `rust`.
+4. Double-click `tcd-heic-to-jpg.exe`.
+
+**Executable path:** `build_output\rust\tcd-heic-to-jpg.exe`
+
+### Create a Desktop Shortcut
+
+Right-click `tcd-heic-to-jpg.exe`. On Windows 11, select **Show more options** if necessary, then choose **Send to → Desktop (create shortcut)**. You can then launch the app from the desktop shortcut.
+
+The `SHA256SUMS.txt` file contains the executable's SHA-256 checksum for verification. Keep the executable and its supporting release files together.

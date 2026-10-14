@@ -1,11 +1,14 @@
-﻿.venv/
+.venv/
 **/.venv/
 __pycache__/
 *.py[cod]
 .pytest_cache/
 build/
 dist/
-build_output/
+build_output/*
+!build_output/rust/
+!build_output/rust/**
+
 *.spec.bak
 logs/*.log
 .DS_Store
