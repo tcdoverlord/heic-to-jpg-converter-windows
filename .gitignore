@@ -1,4 +1,5 @@
-.venv/
+﻿.venv/
+**/.venv/
 __pycache__/
 *.py[cod]
 .pytest_cache/
@@ -9,7 +10,12 @@ build_output/
 logs/*.log
 .DS_Store
 Thumbs.db
-
 desktop.ini
 
-Thumbs.db
+# Rust build output
+/target/
+
+# Local configuration
+.vscode/
+.env
+.env.*

@@ -1,0 +1,57 @@
+﻿name: Build Rust Windows App
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'Cargo.toml'
+      - 'Cargo.lock'
+      - 'src/**'
+      - '.gitignore'
+      - 'README.md'
+      - 'docs/**'
+      - '.github/workflows/build-rust-windows.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install libheif
+        shell: pwsh
+        run: |
+          $Vcpkg = $env:VCPKG_INSTALLATION_ROOT
+          if (-not $Vcpkg) { throw "vcpkg is not available on this runner." }
+          $env:VCPKG_ROOT = $Vcpkg
+          "VCPKG_ROOT=$Vcpkg" | Out-File $env:GITHUB_ENV -Append
+          & "$Vcpkg\vcpkg.exe" install libheif:x64-windows-static-md
+          if ($LASTEXITCODE -ne 0) { throw "libheif installation failed." }
+
+      - name: Cache Rust dependencies
+        uses: Swatinem/rust-cache@v2
+
+      - name: Build release executable
+        run: cargo build --release
+
+      - name: Stage release
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force release | Out-Null
+          Copy-Item target/release/tcd-heic-to-jpg.exe release/HEIC-to-JPG-Converter.exe
+          $Hash = (Get-FileHash release/HEIC-to-JPG-Converter.exe -Algorithm SHA256).Hash
+          "$Hash  HEIC-to-JPG-Converter.exe" | Set-Content release/SHA256SUMS.txt
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: HEIC-to-JPG-Converter-Windows-x64
+          path: release/*
+          if-no-files-found: error

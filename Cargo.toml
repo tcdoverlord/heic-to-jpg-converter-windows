@@ -1,0 +1,20 @@
+[package]
+name = "tcd-heic-to-jpg"
+version = "0.1.0"
+edition = "2021"
+description = "Simple Windows drag-and-drop HEIC/HEIF to JPG converter"
+license = "UNLICENSED"
+
+[dependencies]
+eframe = { version = "0.31", default-features = false, features = ["default_fonts", "glow", "x11"] }
+rfd = "0.15"
+image = { version = "0.25", default-features = false, features = ["jpeg", "png"] }
+anyhow = "1.0"
+walkdir = "2.5"
+libheif-rs = { version = "2.3", features = ["v1_17"] }
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
